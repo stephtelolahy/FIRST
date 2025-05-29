@@ -8,18 +8,14 @@ import Testing
 
 struct SelfValidating01 {
 
-    @Test(arguments: zip([
-        "martin@domain.com",
-        "martin",
-        "domain.com"
-    ], [
-        true,
-        false,
-        false
-    ]))
-    func emailFormat(data: (String, Bool)) throws {
+    @Test(arguments: [
+        "user@domain.com": true,
+        "user": false,
+        "domain.com": false
+    ])
+    func emailFormat(input: String, output: Bool) throws {
         let emailValidator = EmailValidator()
 
-        #expect(emailValidator.isValidEmail(data.0) == data.1)
+        #expect(emailValidator.isValidEmail(input) == output)
     }
 }

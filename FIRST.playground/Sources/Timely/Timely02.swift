@@ -20,7 +20,7 @@ struct TimelyO2 {
         #expect(!account.canWithdraw(100))
     }
 
-    func testCannotWithdraw_WhenBalanceLessThan100() {
+    func testCannotWithdraw_WhenAmountIsGreaterThan500() {
         let account = BankAccount(balance: 1000)
         #expect(!account.canWithdraw(600))
     }

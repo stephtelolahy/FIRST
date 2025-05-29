@@ -6,7 +6,7 @@
 //
 import XCTest
 
-/// On injecte une date fixe pour avoir un comportement déterministe.
+/// Comportement déterministe en injectant une date exacte
 class Repeatable02: XCTestCase {
     func testMessageCalculation_Day() throws {
         let date = try XCTUnwrap(ISO8601DateFormatter().date(from: "2025-05-07T09:26:00Z"))

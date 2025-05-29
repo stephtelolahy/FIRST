@@ -7,8 +7,8 @@
 
 import XCTest
 
+/// Eviter un état global qui peut entrainter un effet de bord avec la //.
 /// Chaque test crée son propre objet.
-/// Eviter un état global qui peut entrainter un effet de bord.
 class Isolated02: XCTestCase {
 
     func testWithdraw_ShouldReduceBalance() {
